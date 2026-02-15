@@ -1,13 +1,18 @@
 require('dotenv').config()
-console.log('DATABASE_URL:', process.env.DATABASE_URL);  // Debug line
 const pool = require('./config/database');
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 const PORT = process.env.PORT || 3000
+
+//Import routes
+const authRoutes = require('./routes/auth')
+
+//Middleware
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({ message: 'Skill Tracker API is running' })
-})
+});
 
 app.get('/test-db', async (req, res) => {
   try {
@@ -24,6 +29,9 @@ app.get('/test-db', async (req, res) => {
   }
 });
 
+// use Auth routes
+app.use('/api/auth', authRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
-})
+});
