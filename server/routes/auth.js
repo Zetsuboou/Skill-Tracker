@@ -9,7 +9,7 @@ const pool = require('../config/database')
 router.post('/register', async(req, res) => {
     try {
 
-        //get data from user when input
+        //get data from user's input
         const {email, password, name, role, department} = req.body;
 
         // Validate input

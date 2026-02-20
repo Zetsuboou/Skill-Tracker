@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000
 
 //Import routes
 const authRoutes = require('./routes/auth')
+const skillsRoutes = require('./routes/skills')
 
 //Middleware
 app.use(express.json());
@@ -31,6 +32,7 @@ app.get('/test-db', async (req, res) => {
 
 // use Auth routes
 app.use('/api/auth', authRoutes);
+app.use('/api/skills', skillsRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
