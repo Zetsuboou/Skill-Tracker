@@ -9,9 +9,11 @@ const authRoutes = require('./routes/auth')
 const skillsRoutes = require('./routes/skills')
 const certificationRoutes = require('./routes/certifications')
 const usersRoutes = require('./routes/users');
+const cors = require('cors');
 
 //Middleware
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.json({ message: 'Skill Tracker API is running' })
