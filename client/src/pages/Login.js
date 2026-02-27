@@ -27,7 +27,7 @@ function Login() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center py-12 px-4">
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4">
             <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
                     Skill Tracker Login
