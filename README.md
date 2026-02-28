@@ -61,7 +61,7 @@ This project was built in 4 days to learn full-stack development:
 
 ## 👨‍💻 Author
 
-Built by MAHRAOUI TAHA 
+Built by Mahraoui Taha
 📧 tahamahra03@gmail.com  
 🔗 www.linkedin.com/in/taha-mahraoui-7b6b51202  
 💻 https://github.com/Zetsuboou
